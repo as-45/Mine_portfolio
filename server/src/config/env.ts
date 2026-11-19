@@ -12,6 +12,9 @@ const envSchema = z.object({
     .refine((value) => value.startsWith('mongodb://') || value.startsWith('mongodb+srv://'), {
       message: 'MONGODB_URI must start with mongodb:// or mongodb+srv://',
     }),
+  JWT_SECRET: z.string().min(32, 'JWT_SECRET must be at least 32 characters long'),
+  ADMIN_EMAIL: z.email().optional(),
+  ADMIN_PASSWORD: z.string().min(12, 'ADMIN_PASSWORD must be at least 12 characters').optional(),
 });
 
 const parsed = envSchema.safeParse(process.env);
@@ -23,3 +26,4 @@ if (!parsed.success) {
 }
 
 export const env = parsed.data;
+export const isProduction = env.NODE_ENV === 'production';

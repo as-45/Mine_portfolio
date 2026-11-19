@@ -1,4 +1,5 @@
 import { Schema, model, type InferSchemaType } from 'mongoose';
+export const PROJECT_CATEGORIES = ['research', 'genai', 'backend', 'fullstack'] as const;
 
 const decisionSchema = new Schema(
   {
@@ -44,7 +45,7 @@ const projectSchema = new Schema(
     category: {
       type: String,
       required: true,
-      enum: ['research', 'genai', 'backend', 'fullstack'],
+      enum: PROJECT_CATEGORIES,
     },
     role: { type: String, default: '', trim: true },
     techStack: { type: [String], default: [] },
