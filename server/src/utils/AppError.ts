@@ -20,4 +20,8 @@ export class AppError extends Error {
     static unauthorized(message = 'You must be logged in') {
     return new AppError(401, 'Unauthorized', message);
   }
+
+    static conflict(message = 'This resource already exists') {
+    return new AppError(409, 'Conflict', message);
+  }
 }
