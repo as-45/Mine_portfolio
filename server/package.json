@@ -11,7 +11,9 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "seed": "tsx src/scripts/seed.ts",
-    "create-admin": "tsx src/scripts/createAdmin.ts"
+    "create-admin": "tsx src/scripts/createAdmin.ts",
+    "test": "jest --runInBand",
+    "test:coverage": "jest --runInBand --coverage"
   },
   "keywords": [],
   "author": "",
@@ -28,14 +30,20 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@jest/globals": "^30.5.2",
     "@types/cookie-parser": "^1.4.10",
     "@types/express": "^5.0.6",
     "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^26.6.6",
+    "@types/supertest": "^7.2.1",
     "eslint": "^10.15.0",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.14.0",
+    "jest": "^30.5.2",
+    "mongodb-memory-server": "^11.3.0",
     "prettier": "^3.10.1",
+    "supertest": "^7.3.2",
+    "ts-jest": "^29.4.15",
     "tsx": "^4.23.15",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.73.0"

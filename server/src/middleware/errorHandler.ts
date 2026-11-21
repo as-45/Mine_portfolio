@@ -61,10 +61,6 @@ export function errorHandler(err: unknown, req: Request, res: Response, _next: N
   });
 }
 
-
-
-
-
 // What it does: it now sorts errors into three types:
 
 // Error type --	Who caused it --	Status --	What the user sees

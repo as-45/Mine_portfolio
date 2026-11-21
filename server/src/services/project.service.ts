@@ -67,11 +67,6 @@ export async function deleteProject(id: string) {
   if (!project) throw AppError.notFound('Project not found');
 }
 
-
-
-
-
-
 // Function	What it does
 // listAllProjects	All projects, drafts included (no published: true filter), plus published and updatedAt so you can see status
 // getProjectById	One project by id, used by the admin edit form. Admin uses id, public uses slug

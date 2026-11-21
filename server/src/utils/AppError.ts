@@ -17,11 +17,11 @@ export class AppError extends Error {
     return new AppError(400, 'BadRequest', message);
   }
 
-    static unauthorized(message = 'You must be logged in') {
+  static unauthorized(message = 'You must be logged in') {
     return new AppError(401, 'Unauthorized', message);
   }
 
-    static conflict(message = 'This resource already exists') {
+  static conflict(message = 'This resource already exists') {
     return new AppError(409, 'Conflict', message);
   }
 }

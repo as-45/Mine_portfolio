@@ -1,5 +1,5 @@
 import pino from 'pino';
-//it creates one shared logger for the entire app 
+//it creates one shared logger for the entire app
 import { env, isProduction, isTest } from './env';
 
 export const logger = pino({
